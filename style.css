@@ -9,6 +9,10 @@ body {
   font-family: Arial, sans-serif;
   height: 100vh;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevents scrollbars */
 }
 
 /* Main container that holds all four zones */
@@ -31,24 +35,12 @@ body {
 }
 
 /* Specific colors for each zone */
-.zone-1 {
-  background-color: black; /* Black */
-  width: 25%; /* 25% width */
-}
-
-.zone-2 {
-  background-color: black; /* Black */
-  width: 25%; /* 25% width */
-}
-
-.zone-3 {
-  background-color: black; /* Black */
-  width: 25%; /* 25% width */
-}
-
+.zone-1,
+.zone-2,
+.zone-3,
 .zone-4 {
-  background-color: black; /* Black */
-  width: 25%; /* 25% width */
+  background-color: black;
+  width: 25%;
 }
 
 /* Score display style */
@@ -56,11 +48,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 400%; /* Make the font size based on viewport width */
+  font-size: calc(30vw + 30vh); /* Combine vw and vh for scaling */
   font-weight: bold;
   color: #fff;
   position: absolute;
-  bottom: 10%; /* Adjusted for better vertical centering */
+  bottom: 10%;
   width: 100%;
   z-index: 1;
   opacity: 100%;
@@ -68,14 +60,28 @@ body {
 
 /* Position the score for the first team (Zone 1 and Zone 2) */
 #score1 {
-  left: 0%; /* Center of zone 1 and zone 2 */
-  width: 50%; /* Span across the middle of zone 1 and zone 2 */
+  left: 0%;
+  width: 50%;
   text-align: center;
 }
 
 /* Position the score for the second team (Zone 3 and Zone 4) */
 #score2 {
-  left: 50%; /* Center of zone 3 and zone 4 */
-  width: 50%; /* Span across the middle of zone 3 and zone 4 */
+  left: 50%;
+  width: 50%;
   text-align: center;
+}
+
+/* Media queries to adjust font size on smaller screens */
+@media (max-width: 600px) {
+  .score {
+    font-size: calc(20vw + 20vh); /* Adjust the font size for smaller screens */
+  }
+}
+
+/* Media queries for larger screens (like tablets or larger phones) */
+@media (min-width: 1200px) {
+  .score {
+    font-size: calc(10vw + 10vh); /* Adjust the font size for larger screens */
+  }
 }
