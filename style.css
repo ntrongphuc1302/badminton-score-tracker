@@ -56,11 +56,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 500px; /* Make the font larger */
+  font-size: 35vw; /* Make the font size based on viewport width */
   font-weight: bold;
   color: #fff;
   position: absolute;
-  bottom: 15%; /* Move score to the bottom center */
+  bottom: 10%; /* Adjusted for better vertical centering */
   width: 100%;
   z-index: 1;
   opacity: 100%;
