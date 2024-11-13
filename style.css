@@ -56,7 +56,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4000%; /* Make the font size based on viewport width */
+  font-size: 75vh; /* Make the font size based on viewport width */
   font-weight: bold;
   color: #fff;
   position: absolute;
