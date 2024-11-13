@@ -3,13 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Badminton Score Tracker</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Badminton Scoreboard</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="scoreboard" onclick="handleClick(event)">
-      <div id="player1-score" class="score">00</div>
-      <div id="player2-score" class="score">00</div>
+    <div class="container">
+      <!-- Left Side Zones -->
+      <div class="zone zone-1" onclick="incrementLeft()"></div>
+      <div class="zone zone-2" onclick="incrementLeft()"></div>
+      <!-- Score Display for Left and Right -->
+      <div class="score" id="score1">00</div>
+      <!-- Right Side Zones -->
+      <div class="zone zone-3" onclick="incrementRight()"></div>
+      <div class="zone zone-4" onclick="incrementRight()"></div>
+      <!-- Score Display for Right -->
+      <div class="score" id="score2">00</div>
     </div>
     <script src="script.js"></script>
   </body>

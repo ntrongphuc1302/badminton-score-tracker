@@ -1,0 +1,81 @@
+/* Resetting default margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-color: black;
+}
+
+/* Main container that holds all four zones */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Common styles for all zones */
+.zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  opacity: 30%;
+}
+
+/* Specific colors for each zone */
+.zone-1 {
+  background-color: black; /* Black */
+  width: 25%; /* 25% width */
+}
+
+.zone-2 {
+  background-color: black; /* Black */
+  width: 25%; /* 25% width */
+}
+
+.zone-3 {
+  background-color: black; /* Black */
+  width: 25%; /* 25% width */
+}
+
+.zone-4 {
+  background-color: black; /* Black */
+  width: 25%; /* 25% width */
+}
+
+/* Score display style */
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 500px; /* Make the font larger */
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  bottom: 15%; /* Move score to the bottom center */
+  width: 100%;
+  z-index: 1;
+  opacity: 100%;
+}
+
+/* Position the score for the first team (Zone 1 and Zone 2) */
+#score1 {
+  left: 0%; /* Center of zone 1 and zone 2 */
+  width: 50%; /* Span across the middle of zone 1 and zone 2 */
+  text-align: center;
+}
+
+/* Position the score for the second team (Zone 3 and Zone 4) */
+#score2 {
+  left: 50%; /* Center of zone 3 and zone 4 */
+  width: 50%; /* Span across the middle of zone 3 and zone 4 */
+  text-align: center;
+}
